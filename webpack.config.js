@@ -4,7 +4,7 @@ var path = require('path'),
 module.exports = {
   // cache: true,
   // context: __dirname,
-  context: __dirname + "/source/scripts",
+  context: __dirname + "/../../source/scripts",
   externals: {
     fs: '{}',
     tls: '{}',
