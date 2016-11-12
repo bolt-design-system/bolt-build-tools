@@ -13,7 +13,6 @@ var bs = require("browser-sync").create('BrowserSync Server');
 
 
 module.exports = function (gulp, config, $) {
-  
   gulp.task('browsersync', 'Local web server. Live reloads when CSS, HTML, or JavaScript changes.', function(){
   
     bs.use({
@@ -42,7 +41,30 @@ module.exports = function (gulp, config, $) {
           // }),
           // webpackHotMiddleware(bundler)
         ]
+      }
+    });
+  
+  gulp.task('browsersync:proxy', 'Locally proxy Drupal instance.', function(){
+  
+    bs.init({
+      ui: false,
+      notify: false,
+      open: true,
+      https: true,
+      ghostMode: {
+        clicks: false,
+        forms: false,
+        scroll: false
       },
+      serveStatic: [{
+          route: '/profiles/pegasystems/themes/custom/pegas/pegakit/public/styles',
+          dir: 'public/styles'
+      }, {
+          route: '/profiles/pegasystems/themes/custom/pegas/pegakit/public/scripts',
+          dir: 'public/scripts'
+      }
+      ],
+      proxy: "https://local.pega.com"
     });
     
   });

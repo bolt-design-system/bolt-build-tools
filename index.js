@@ -1,7 +1,7 @@
 /* globals require */
 
 
-module.exports = function(gulp, config) {
+module.exports = function(gulp, config, webpackConfig) {
   var gulp = require('gulp-help')(require('gulp'));
   // var gulp = require('gulp-help')(require('gulp'));
   // var argv = require('yargs').argv;
@@ -14,7 +14,9 @@ module.exports = function(gulp, config) {
   var config = _.defaultsDeep(defaultConfig, config);
 
   
-  
+  if (!webpackConfig){
+    webpackConfig = require('./webpack.config.js');
+  } 
   
 
   global.$ = require('gulp-load-plugins')({
@@ -50,7 +52,7 @@ module.exports = function(gulp, config) {
   require("./build/tasks/browsersync")(gulp, config, $);
   require("./build/tasks/styles")(gulp, config, $);
   require("./build/tasks/watch")(gulp, config, $);
-  require("./build/tasks/webpack")(gulp, config, $);
+  require("./build/tasks/webpack")(gulp, config, $, webpackConfig);
   require("./build/tasks/svgstore")(gulp, config, $);
   require("./build/tasks/autoreload")(gulp, config, $);
   require("./build/tasks/email-templates")(gulp, config, $);
@@ -59,7 +61,7 @@ module.exports = function(gulp, config) {
   require("./build/tasks/images")(gulp, config, $);
   require("./build/tasks/stylelint")(gulp, config, $);
   require("./build/tasks/download-icons")(gulp, config, $);
-  require("./build/tasks/webpack-dev-server")(gulp, config, $);
+  require("./build/tasks/webpack-dev-server")(gulp, config, $, webpackConfig);
 
 
   gulp.task('default', 'Starts up the front-end workflow / build process for local development. Same as just running `gulp`.', function(cb) {
@@ -68,6 +70,10 @@ module.exports = function(gulp, config) {
 
   gulp.task('serve', 'Exact same thing as `gulp` or `gulp default`, just without autoreloading.', function(cb) {
     runSequence(['copy:fonts', 'download-all-icons', 'browsersync', 'patternlab', 'styles', 'svgstore', 'email-templates', 'webpack', 'watch'], cb);
+  });
+  
+  gulp.task('serve:proxy', 'Proxy a local Drupal instance but also inject CSS and JS changes.', function(cb) {
+    runSequence(['copy:fonts', 'browsersync:proxy', 'styles', 'svgstore', 'webpack', 'watch:proxy'], cb);
   });
 
 
