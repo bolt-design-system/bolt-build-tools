@@ -43,6 +43,7 @@ module.exports = function (gulp, config, $) {
         ]
       }
     });
+  });
   
   gulp.task('browsersync:proxy', 'Locally proxy Drupal instance.', function(){
   
