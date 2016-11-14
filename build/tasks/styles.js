@@ -23,7 +23,7 @@ var processors = [
 
 module.exports = function (gulp, config, $) {
   
-  const cssFilter = $.filter('**/screen.css', {restore: true});
+  const cssFilter = $.filter('**/pegawww.css', {restore: true});
   
   gulp.task('styles', 'Compile Sass to CSS using Libsass with Autoprefixer and SourceMaps', function(done){
     return gulp.src([
