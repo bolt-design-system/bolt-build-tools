@@ -27,7 +27,7 @@ module.exports = function (gulp, config, $) {
   
   gulp.task('styles', 'Compile Sass to CSS using Libsass with Autoprefixer and SourceMaps', function(done){
     return gulp.src([
-    './source/styles/*.scss'
+    './source/styles/**/*.scss'
     ])
     .pipe($.plumber({
       errorHandler: function (error) {
@@ -39,7 +39,7 @@ module.exports = function (gulp, config, $) {
     }))
     .pipe($.env.development($.sourcemaps.init()))
     .pipe($.sass({
-      includePaths: ['node_modules'],
+      includePaths: ['node_modules', 'source/styles'],
       outputStyle: 'expanded',
       functions: export_sass('./source/_data', 'jsonexport')
     }).on('error', $.sass.logError))
