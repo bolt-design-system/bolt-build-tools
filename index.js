@@ -8,7 +8,7 @@ module.exports = function(gulp, config, webpackConfig) {
   var spawn = require('child_process').spawn;
   
   
-  var defaultConfig = require('./gulp.config');
+  var defaultConfig = require('./gulp-config');
   var _ = require('lodash');
   var config = _.defaultsDeep(defaultConfig, config);
   
