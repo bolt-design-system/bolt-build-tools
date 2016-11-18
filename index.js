@@ -2,17 +2,15 @@
 
 
 module.exports = function(gulp, config, webpackConfig) {
-  var gulp = require('gulp-help')(require('gulp'));
   // var gulp = require('gulp-help')(require('gulp'));
   // var argv = require('yargs').argv;
-  var runSequence = require('run-sequence');
+  var runSequence = require('run-sequence').use(gulp);
   var spawn = require('child_process').spawn;
   
   
   var defaultConfig = require('./gulp.config');
   var _ = require('lodash');
   var config = _.defaultsDeep(defaultConfig, config);
-
   
   if (!webpackConfig){
     webpackConfig = require('./webpack.config.js');

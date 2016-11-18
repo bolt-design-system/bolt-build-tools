@@ -3,10 +3,12 @@ var browserSync = require("browser-sync").get('BrowserSync Server');
 // var gulpUglify = require('gulp-uglify/minifier');
 // var uglifyJS = require("uglify-js");
 var webpack = require('webpack');
-var webpackConfig = require('../../webpack.config.js');
+
 var WebpackDevServer = require("webpack-dev-server");
 
-module.exports = function (gulp, config, $) {
+module.exports = function (gulp, config, $, webpackConfig) {
+  
+  //var webpackConfig = require('../../webpack.config.js');
   
   gulp.task('webpack-dev-server', 'Hot swappable JavaScript modules for crazy fast local JS development.', function(done){
   

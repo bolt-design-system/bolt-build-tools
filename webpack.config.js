@@ -73,7 +73,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components|critical)/,
+        exclude: /(bower_components|critical)/,
         // include: [
         //   path.join(process.cwd(), './source/scripts/app.js'),
         //   path.join(process.cwd(), './source/scripts/styleguide.js')

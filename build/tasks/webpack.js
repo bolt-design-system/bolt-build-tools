@@ -3,10 +3,12 @@ var browserSync = require("browser-sync").get('BrowserSync Server');
 // var gulpUglify = require('gulp-uglify/minifier');
 // var uglifyJS = require("uglify-js");
 var stream = require('webpack-stream');
-var webpackConfig = require('../../webpack.config.js');
 
 
-module.exports = function (gulp, config, $) {
+
+module.exports = function (gulp, config, $, webpackConfig) {
+  
+  //var webpackConfig = require('../../webpack.config.js');
   
   var myConfig = Object.create(webpackConfig);
   // myConfig.devtool = "eval";
