@@ -41,6 +41,9 @@ module.exports = function (gulp, config, $) {
           // }),
           // webpackHotMiddleware(bundler)
         ]
+      },
+      snippetOptions: {
+        blacklist: ['/index.html', '/', '/?*']
       }
     });
   });
