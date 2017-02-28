@@ -12,9 +12,7 @@ module.exports = {
   entry: {
     app: [
       './app.js'
-    ],
-    critical: './critical.js',
-    styleguide: './styleguide.js'
+    ]
   },
   output: {
     path: path.resolve('public'),

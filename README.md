@@ -34,6 +34,38 @@ require('pegakit-build-tools')(gulp, localConfig, webpackConfig);
 * You'll now be able to execute any task in this repo. Run `gulp help` for more info on these tasks.
 
 
+## Default Webpack configuration
+
+The default Webpack configuration bundled has a few assumptions that can be easily overwritten and customized by adding a `local.webpack.config.js` file to the root of your project.
+
+Here's a few default settings currently set:
+
+1. **Default Source Path**: Any custom source code (that is, any JavaScript that isn't automatically installed  via npm and required into your project) lives inside the `source/scripts` folder. In Webpack 1.x, this is configued by the `context` setting in your webpack.config.js file.
+  ```
+  context: __dirname + "/../../source/scripts",
+  ```
+2. **Default Entry File**: There's at least one JS entry file in your project. By default, we assume the main JS entry point file is called app.js and lives in the root of your scripts folder (ex. `/source/scripts/app.js`). Additional entry files (say, for separate bundles handling Critical JS vs Non-Critical JS) can be set in Webpack 1.x in the `entry` section of your local.webpack.config.js file:
+  
+  Let's say we wanted to have 2 main JavaScript bundles: our main `app.js` bundle that includes any standalone JS modules we've created and a completely separate JS bundle for handling any critical logic that we want to inline on the page, `critical.js`:
+  ```
+  entry: {
+    app: './app.js',
+    critical: './critical.js'
+  },
+  ```
+3. **Default Output Path** Any JavaScript entry points specified are individually bundled and moved to the `public/scripts` folder, tacking on .built.js to the end of the file name. For example, our `/source/scripts/app.js` file will compile to `/public/scripts/app.built.js`.
+  
+  In Webpack 1.x, this can be updated in the `output` section of our local.webpack.config.js file:
+  ```
+  output: {
+    path: path.resolve('public'),
+    publicPath: '/scripts/',
+    filename: '[name].built.js',
+    chunkFilename: '[chunkhash].bundle.js'
+  },
+  ```
+
+
 ## Roadmap
 * **@TODO**: Add in ESLint default config + JS validation options
 * **@TODO**: Lint existing default configs + Gulp tasks
