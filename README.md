@@ -35,6 +35,8 @@ require('pegakit-build-tools')(gulp, localConfig, webpackConfig);
 
 
 ## Roadmap
+* **@TODO**: Add in ESLint default config + JS validation options
+* **@TODO**: Lint existing default configs + Gulp tasks
 * **@TODO**: Merge Webpack config with local Gulp config options.
 * **@TODO**: Refactor gulp tasks to actually USE the local config options. The Webpack configuration / overrides work however everything else is still hard-coded in the individual build tasks themselves.
 * **@TODO**: Document an example of adding additional build tasks to the default set of pre-defined tasks.
