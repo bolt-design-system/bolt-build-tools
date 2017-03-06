@@ -2,6 +2,9 @@
 
 
 module.exports = function(gulp, config, webpackConfig) {
+  
+  require('dotenv').config();
+  
   // var gulp = require('gulp-help')(require('gulp'));
   // var argv = require('yargs').argv;
   var runSequence = require('run-sequence').use(gulp);
@@ -56,6 +59,7 @@ module.exports = function(gulp, config, webpackConfig) {
   require("./build/tasks/email-templates")(gulp, config, $);
   require("./build/tasks/patternlab")(gulp, config, $);
   require("./build/tasks/penthouse")(gulp, config, $);
+  require("./build/tasks/release")(gulp, config, $);
   require("./build/tasks/images")(gulp, config, $);
   require("./build/tasks/stylelint")(gulp, config, $);
   require("./build/tasks/download-icons")(gulp, config, $);
