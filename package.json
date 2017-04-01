@@ -1,6 +1,6 @@
 {
-  "name": "pegakit-build-tools",
-  "version": "0.0.2",
+  "name": "@pegakit/build-tools",
+  "version": "1.0.0",
   "description": "A collection of front-end build tools + pre-packaged local front-end dev environment.",
   "main": "index.js",
   "repository": {

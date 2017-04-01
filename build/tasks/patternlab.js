@@ -19,7 +19,7 @@ module.exports = function (gulp, config, $) {
             message: "Error: <%= error.message %>"
           })
         }))
-        .pipe($.exec('php  -d memory_limit=1024M pattern-lab/core/console --generate --patternsonly'))
+        .pipe($.exec('cd pattern-lab && php core/console -gpn'))
         .pipe($.exec.reporter(reportOptions));
         
   });
