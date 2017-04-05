@@ -2,6 +2,8 @@
 [![dependencies Status](https://david-dm.org/pega-digital/pegakit-build-tools/status.svg)](https://david-dm.org/pega-digital/pegakit-build-tools)
 
 # PegaKit Build Tools
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/pega-digital/pegakit-build-tools.svg)](https://greenkeeper.io/)
 A collection of helpful front-end gulp tasks and build processes. Originally inspired by the awesome [fourkitchens/fourk-gulp](https://github.com/fourkitchens/emulsify-gulp) project.
 
 ## How to use it
