@@ -1,0 +1,35 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.8.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - browser-sync > socket.io > socket.io-parser > debug:
+        patched: '2017-11-15T00:23:48.975Z'
+    - gm > debug:
+        patched: '2017-11-15T00:23:48.975Z'
+    - browser-sync > connect > finalhandler > debug:
+        patched: '2017-11-15T00:23:48.975Z'
+    - browser-sync > serve-index > debug:
+        patched: '2017-11-15T00:23:48.975Z'
+    - browser-sync > serve-static > send > debug:
+        patched: '2017-11-15T00:23:48.975Z'
+    - browser-sync > localtunnel > debug:
+        patched: '2017-11-15T00:23:48.975Z'
+    - browser-sync > socket.io > engine.io > debug:
+        patched: '2017-11-15T00:23:48.975Z'
+    - browser-sync > connect > debug:
+        patched: '2017-11-15T00:23:48.975Z'
+    - browser-sync > socket.io > socket.io-client > socket.io-parser > debug:
+        patched: '2017-11-15T00:23:48.975Z'
+    - browser-sync > socket.io > socket.io-client > debug:
+        patched: '2017-11-15T00:23:48.975Z'
+    - browser-sync > socket.io > socket.io-adapter > debug:
+        patched: '2017-11-15T00:23:48.975Z'
+    - browser-sync > socket.io > debug:
+        patched: '2017-11-15T00:23:48.975Z'
+    - browser-sync > socket.io > socket.io-client > engine.io-client > debug:
+        patched: '2017-11-15T00:23:48.975Z'
+  'npm:marked:20170907':
+    - gulp-notify > node-notifier > cli-usage > marked:
+        patched: '2017-11-15T00:23:48.975Z'
