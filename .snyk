@@ -1,0 +1,18 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.10.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - gm > debug:
+        patched: '2017-12-27T00:26:52.714Z'
+    - browser-sync > connect > debug:
+        patched: '2017-12-27T00:26:52.714Z'
+    - browser-sync > connect > finalhandler > debug:
+        patched: '2017-12-27T00:26:52.714Z'
+    - browser-sync > serve-index > debug:
+        patched: '2017-12-27T00:26:52.714Z'
+    - browser-sync > serve-static > send > debug:
+        patched: '2017-12-27T00:26:52.714Z'
+    - browser-sync > localtunnel > debug:
+        patched: '2017-12-27T00:26:52.714Z'
