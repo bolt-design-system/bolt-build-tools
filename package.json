@@ -111,12 +111,12 @@
     "support-for": "^1.0.6",
     "through2": "^2.0.1",
     "uglify-js": "^2.7.0",
-    "webpack": "^1.13.1",
+    "webpack": "^2.2.0",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.12.2",
     "webpack-module-hot-accept": "^1.0.4",
-    "webpack-stream": "^3.2.0",
+    "webpack-stream": "^4.0.0",
     "yargs": "^4.8.1"
   }
 }
