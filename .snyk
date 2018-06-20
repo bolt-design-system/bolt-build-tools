@@ -1,0 +1,31 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - browser-sync > connect > debug:
+        patched: '2018-06-20T03:22:46.243Z'
+    - browser-sync > serve-index > debug:
+        patched: '2018-06-20T03:22:46.243Z'
+    - browser-sync > localtunnel > debug:
+        patched: '2018-06-20T03:22:46.243Z'
+    - browser-sync > connect > finalhandler > debug:
+        patched: '2018-06-20T03:22:46.243Z'
+  'npm:hoek:20180212':
+    - gulp-sass > node-sass > node-gyp > request > hawk > hoek:
+        patched: '2018-06-20T03:22:46.243Z'
+    - gulp-sass > node-sass > node-gyp > request > hawk > boom > hoek:
+        patched: '2018-06-20T03:22:46.243Z'
+    - node-sass > node-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-06-20T03:22:46.243Z'
+    - gulp-sass > node-sass > node-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-06-20T03:22:46.243Z'
+    - node-sass > node-gyp > request > hawk > hoek:
+        patched: '2018-06-20T03:22:46.243Z'
+    - node-sass > node-gyp > request > hawk > boom > hoek:
+        patched: '2018-06-20T03:22:46.243Z'
+    - node-sass > node-gyp > request > hawk > sntp > hoek:
+        patched: '2018-06-20T03:22:46.243Z'
+    - gulp-sass > node-sass > node-gyp > request > hawk > sntp > hoek:
+        patched: '2018-06-20T03:22:46.243Z'
