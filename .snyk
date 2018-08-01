@@ -1,0 +1,47 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - browser-sync > localtunnel > debug:
+        patched: '2018-08-01T03:30:02.301Z'
+  'npm:hoek:20180212':
+    - gulp-sass > node-sass > node-gyp > request > hawk > boom > hoek:
+        patched: '2018-08-01T03:30:02.301Z'
+    - gulp-sass > node-sass > node-gyp > request > hawk > sntp > hoek:
+        patched: '2018-08-01T03:30:02.301Z'
+    - gulp-sass > node-sass > node-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-08-01T03:30:02.301Z'
+    - node-sass > node-gyp > request > hawk > hoek:
+        patched: '2018-08-01T03:30:02.301Z'
+    - node-sass > node-gyp > request > hawk > boom > hoek:
+        patched: '2018-08-01T03:30:02.301Z'
+    - node-sass > node-gyp > request > hawk > sntp > hoek:
+        patched: '2018-08-01T03:30:02.301Z'
+    - node-sass > node-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-08-01T03:30:02.301Z'
+    - gulp-sass > node-sass > node-gyp > request > hawk > hoek:
+        patched: '2018-08-01T03:30:02.301Z'
+  'npm:lodash:20180130':
+    - browser-sync > easy-extender > lodash:
+        patched: '2018-08-01T03:30:02.301Z'
+    - browser-sync > eazy-logger > opt-merger > lodash:
+        patched: '2018-08-01T03:30:02.301Z'
+    - node-sass-export > lodash:
+        patched: '2018-08-01T03:30:02.301Z'
+    - penthouse > apartment > lodash:
+        patched: '2018-08-01T03:30:02.301Z'
+  'npm:tunnel-agent:20170305':
+    - gulp-imagemin > imagemin-gifsicle > gifsicle > bin-build > download > caw > tunnel-agent:
+        patched: '2018-08-01T03:30:02.301Z'
+    - gulp-imagemin > imagemin-gifsicle > gifsicle > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-08-01T03:30:02.301Z'
+    - gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-build > download > caw > tunnel-agent:
+        patched: '2018-08-01T03:30:02.301Z'
+    - gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-08-01T03:30:02.301Z'
+    - gulp-imagemin > imagemin-optipng > optipng-bin > bin-build > download > caw > tunnel-agent:
+        patched: '2018-08-01T03:30:02.301Z'
+    - gulp-imagemin > imagemin-optipng > optipng-bin > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-08-01T03:30:02.301Z'
